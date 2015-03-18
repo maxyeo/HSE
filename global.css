@@ -569,10 +569,33 @@ table {
  */
 
 @font-face {
-    font-family: '';
-    font-style: normal;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(http://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(http://fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1-gdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans';
+}
+
+nav a {
+    font-family: 'Noto Sans';
     font-weight: 400;
-    src: local(''), url();
+    color: #555;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 20px;
 }
 
 /**
@@ -588,9 +611,70 @@ table {
  * 4.0 Header
  */
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 2px solid rgba(73, 116, 162, 1);
+}
+header nav {
+    height: 100%;
+    display: inline-block;
+    padding: 40px 0 10px;
+    border-bottom: 2px solid #fff;
+}
+
 /**
  * 5.0 Content
  */
+
+/* Home */
+    #home {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #filter {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(55,55,55,.3);
+    }
+    #home-wrapper {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    #home-logo {
+        width: 100%;
+        max-width: 901px;
+        height: 341px;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #home h2 {
+        font-size: 30px;
+        text-align: center;
+        color: #fff;
+    }
+/* Home */
+
+/* About */
+    #about {
+        padding: 60px 0;
+        background-color: #eee;
+    }
+/* End About */
 
 /**
  * 6.0 Footer

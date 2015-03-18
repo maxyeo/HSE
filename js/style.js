@@ -17,7 +17,7 @@ function sizeitup() {
   var bodyh = $(window).height();
   var bodyw = $(window).width();
   if (bodyw > 650) {
-    $("").css("height",bodyh);
+    $(".top").css("height",bodyh);
   }
 }
 
