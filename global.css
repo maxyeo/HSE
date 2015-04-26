@@ -98,8 +98,11 @@ a:focus {
 }
 /* Improve readability when focused and also mouse hovered in all browsers. */
 a:active,
-a:hover {
+a:hover,
+a:visited,
+a:link {
     outline: 0;
+    outline: none;
 }
 
 /* Typography */
@@ -567,35 +570,74 @@ table {
 /**
  * 3.0 Typography
  */
-
 @font-face {
-  font-family: 'Noto Sans';
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
-  src: local('Noto Sans'), local('NotoSans'), url(http://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  src: local('Merriweather'), url(http://fonts.gstatic.com/s/merriweather/v8/RFda8w1V0eDZheqfcyQ4EOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 @font-face {
-  font-family: 'Noto Sans';
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
-  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(http://fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1-gdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(http://fonts.gstatic.com/s/merriweather/v8/ZvcMqxEwPfh2qDWBPxn6nnNuWYKPzoeKl5tYj8yhly0.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans';
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Merriweather Heavy Italic'), local('Merriweather-HeavyItalic'), url(http://fonts.gstatic.com/s/merriweather/v8/EYh7Vl4ywhowqULgRdYwIN4rWrnaUG5GaGDO0TOZR8c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oxygen Light'), local('Oxygen-Light'), url(http://fonts.gstatic.com/s/oxygen/v5/AwBqWF2kjhlybWamaKMPcVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(http://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2ltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+h1, h2 {
+    font-family: 'Oxygen';
+    font-weight: 300;
+}
+
+h3, h4 {
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-style: italic;
+}
+
+h5, h6 {
+    font-family: 'Oxygen';
+    font-weight: 700;   
+}
+
+p {
+    font-family: 'Merriweather';
+    font-weight: 400;   
 }
 
 nav a {
-    font-family: 'Noto Sans';
+    font-family: 'Oxygen';
     font-weight: 400;
-    color: #555;
+    color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 20px;
-    margin: 0 20px;
 }
 
 /**
@@ -611,22 +653,80 @@ nav a {
  * 4.0 Header
  */
 
+body.noscroll {
+    overflow: hidden;
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     height: 100px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
-    background-color: #fff;
-    border-bottom: 2px solid rgba(73, 116, 162, 1);
+    background-color: transparent;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+header.up {
+    height: 70px;
+    background-color: rgba(245,245,245,.97);
+}
+header.up nav {
+    padding: 25px 0 10px;
+}
+header.up nav a {
+    color: #555;
+}
+header.up nav a:after {
+    background-color: #555;
+}
+#logo {
+    height: 80%;
+    width: 190px;
+    position: absolute;
+    left: 25px;
+    top: 10%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 header nav {
     height: 100%;
     display: inline-block;
     padding: 40px 0 10px;
-    border-bottom: 2px solid #fff;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+nav a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+nav a:hover:after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
 }
 
 /**
@@ -636,28 +736,27 @@ header nav {
 /* Home */
     #home {
         background-size: cover;
-        background-position: center;
+        background-position: top;
         background-repeat: no-repeat;
+        position: relative;
     }
     #filter {
         width: 100%;
         height: 100%;
-        background-color: rgba(55,55,55,.3);
-    }
-    #home-wrapper {
         position: absolute;
-        top: 50%;
-        width: 100%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
     }
     #home-logo {
-        width: 100%;
-        max-width: 901px;
-        height: 341px;
-        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        opacity: 1;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -665,17 +764,637 @@ header nav {
     #home h2 {
         font-size: 30px;
         text-align: center;
-        color: #fff;
+        color: rgb(18, 48, 81);
+        margin: 0;
     }
 /* Home */
 
 /* About */
     #about {
-        padding: 60px 0;
-        background-color: #eee;
+        padding: 0 0 600px;
+        background-color: #ddd;
+        position: relative;
+        background-image: url(/img/about-bg1.jpg);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    #about h2 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: 0;
+        font-size: 90px;
+        padding: 70px;
+        text-align: center;
+        color: #24244B;
+    }
+    #down-arrow {
+        height: 70px;
+        width: 100%;
+        position: absolute;
+        top: -70px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    #about i {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+        opacity: 0;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #left {
+        width: 0px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top: 0px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 30px solid #ddd;
+        border-right: 0px solid transparent;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #right {
+        width: 0px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-top: 0px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 30px solid #ddd;
+        border-right: 0px solid transparent;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #down-arrow:hover i {
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+        -moz-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    #down-arrow:hover #left,
+    #down-arrow:hover #right {
+        border-bottom-width: 70px;
+    }
+    #timeline {
+        position: absolute;
+        top: 254px;
+        left: 50%;
+        height: 800px;
+        width: 1px;
+        background-color: #24244B;
+    }
+    #timeline:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: 10px;
+        height: 10px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background-color: #24244B;
+    }
+    #about h5 {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: .23em;
+        color: #555;
+        margin: 140px 0 1em;
+    }  
+    #about h5:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 115%;
+        background-color: #24244B;
+        margin: 10px 0;
+    }
+    #about p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 32px;
+    }
+    #about-content {
+        padding: 0 40px 0 0;
+        text-align: right;
+    }
+    .jhu {
+        width: 330px;
+        height: 330px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background-color: #fff;
+        margin: 0 auto;
+        border: 8px solid #24244B;
+    }
+    .jhu span {
+        width: 300px;
+        height: 300px;
+        display: block;
+        margin: 7px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 2px solid #24244B;
+    }
+    #history {
+        margin-top: 140px;
+    }
+    #history h5:after {
+        float: right;
+    }
+    #history-content {
+        padding: 0 0 0 40px;
+    }
+    #quote {
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+        font-size: 20px;
+        font-weight: 900;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: #fff;
+        padding: 70px 120px;
+        background-color: rgba(36, 36, 75, 0.87);
+    }
+    #quote-pic {
+        position: absolute;
+        top: -47px;
+        left: -8px;
+        width: 110px;
+        height: 110px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #quote-pic-right {
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        bottom: -47px;
+        right: -8px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    #quote h6 {
+        color: rgb(110, 143, 187);
+        margin: .25em 0;
+        text-align: right;
     }
 /* End About */
+
+/* Enterprises */
+    #enterprises {
+        position: relative;
+    }
+    #enterprises h2 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: 0;
+        font-size: 90px;
+        line-height: 115px;
+        padding: 70px 0 210px;
+        text-align: center;
+        color: #24244B;
+    }
+    /* Ent Menu */
+        #ent-menu {
+            width: 100%;
+            background-color: #fff;
+            position: absolute;
+            top: 185px;
+            bottom: auto;
+            left: 0;
+            z-index: 1;
+            padding: 75px 10px 5px;
+            height: 140px;
+            overflow: hidden;
+            -webkit-transition: background-color .3s;
+            -moz-transition: background-color .3s;
+            transition: background-color .3s;
+        }
+        #ent-menu.move {
+            position: fixed;
+            top: 0;
+            bottom: auto;
+            background-color: rgb(245,245,245);
+        }
+        #ent-menu.bot {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            background-color: rgb(245,245,245);
+        }
+        #ent-menu ul {
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 900px;
+            height: 100%;
+            text-align: center;
+            font-size: 0;
+        }
+        #ent-menu li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 10px;
+            width: 12.5%;
+            display: inline-block;
+        }
+        #ent-menu li a {
+            width: 100%;
+            height: 50px;
+            display: block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            transition: all .2s;
+        }
+        #ent-menu li a:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    /* End Ent Menu */
+    /* single enterprise */
+        .enterprise {
+            position: relative;
+            padding-bottom: 50%;
+            text-align: center;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .ent-logo {
+            height: 150px;
+            width: 300px;
+            margin: 0 auto 10px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
+        }
+        .ent-logo:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+        .enterprise video {
+            height: auto;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .ent-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            max-width: 800px;
+            color: #fff;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        #blue-jay-bay .ent-body {
+            background-color: #ddd;
+            padding: 5px 20px;
+            color: #222;
+        }
+        #blue-jay-cleaners .ent-body {
+            background-color: #ddd;
+            padding: 5px 20px;
+            color: #222;
+        }
+        #blue-jay-boxes .ent-body {
+            background-color: #ddd;
+            padding: 5px 20px;
+            color: #222;
+        }
+        #hopinks .ent-body {
+            background-color: #ddd;
+            padding: 5px 20px;
+            color: #222;
+        }
+        #complete-dorm-room .ent-body {
+            background-color: #ddd;
+            padding: 5px 20px;
+            color: #222;
+        }
+        #hopkins-student-movers .ent-body {
+            background-color: #ddd;
+            padding: 5px 20px;
+            color: #222;
+        }
+    /* end single enterprise */
+/* End Enterprises */
+
+/* Team */
+    #team {
+        position: relative;
+        text-align: center;
+        padding: 0 10px 80px;
+        background-image: url(/img/gplay.png);
+    }
+    #team h2 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: 0;
+        font-size: 90px;
+        padding: 40px;
+        text-align: center;
+        color: #24244B;
+    }
+    .mem {
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    .mem:nth-child(6n+1) {
+        clear: both;
+    }
+    .mem-photo {
+        width: 100%;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .mem:hover .mem-photo {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    .mem h3 {
+        font-size: 14px;
+        margin: .5em;
+    }
+    .mem h4 {
+        font-size: 10px;
+        margin: 0;
+    }
+/* End Team */
+
+/* Bios Section */
+    #bios {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #bios.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    #bios-out {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+        color: #eee;
+        cursor: pointer;
+    }
+    #bios-out:hover {
+        color: #f00;
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    #bios-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        max-width: 900px;
+        height: 90%;
+        max-height: 556px;
+        background-color: #ddd;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    #bios-pic {
+        float: left;
+        height: 100%;
+        width: 40%;
+        margin-right: 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #bios-content {
+        height: 100%;
+        overflow-y: auto;
+    }
+    #bios h4 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: 0;
+        font-size: 60px;
+        padding: 30px 5px 0;
+        text-align: center;
+        color: #24244B;
+    }
+    #bios h5 {
+        font-family: "Oxygen";
+        font-weight: 300;
+        margin: .25em;
+        font-size: 18px;
+        text-align: center;
+        color: #818181;
+    }
+    #bios h6 {
+        font-size: 14px;
+        margin-bottom: 0;
+        letter-spacing: .13em;
+        color: #24244B;   
+    }
+    #bios p {
+        font-size: 12px;
+        margin: 0 20px 0 0;
+        line-height: 20px;
+    }
+/* End Bios Secion */
+
+/* Start Your Venture */
+    #start-your-venture {
+        position: relative;
+        padding: 0 5px 210px;
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #start-your-venture h2 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: 0;
+        font-size: 90px;
+        line-height: 115px;
+        padding: 70px 0 70px;
+        text-align: center;
+        color: #24244B;
+    }
+    .ven {
+        padding: 20px 10px 10px;
+        text-align: center;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .ven:hover {
+        background-color: rgba(22,22,22,.4);
+    }
+    .ven i {
+        width: 150px;
+        height: 150px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        background-color: rgba(255,255,255,.7);
+        color: #24244B;
+        line-height: 150px;
+        font-size: 50px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .ven:hover i { 
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        background-color: rgba(255,255,255,1);
+    }
+    .ven i:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        border: 10px solid rgba(255,255,255,.7);
+        opacity: 0;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+        margin: -140px -10px 0;
+    }
+    .ven:hover i:after { 
+        opacity: 1;
+    }
+    .ven h5 {
+        margin: 5px auto 10px;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    .ven p {
+        opacity: 0;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .ven:hover p {
+        opacity: 1;
+    }
+/* End Start Your Venture */
+
+/* Contact */
+    #contact {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    #contact h2 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: -89px 0 0;
+        font-size: 90px;
+        line-height: 115px;
+        padding: 0 0 80px;
+        text-align: center;
+        color: #fff;
+    }
+    #contact h6 {
+        margin: 90px 0 0;
+        padding: 20px 5px;
+        background-color: #222;
+        color: #ddd;
+        text-align: center;
+    }
+/* End Contact */
 
 /**
  * 6.0 Footer
  */
+
+ footer {
+    padding: 100px 20px;
+    background-color: #555;
+ }

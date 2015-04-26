@@ -11,60 +11,318 @@
 		<meta name="description" content="">
 		<meta name="author" content="Max Yeo">
 
-		<link rel="shortcut icon" href="img/logo.png">
-		<link rel="apple-touch-icon" href="img/logo.png">
+		<link rel="shortcut icon" href="img/logo/logo.png">
+		<link rel="apple-touch-icon" href="img/logo/logo.png">
 
 		<link rel="stylesheet" href="global.css" type="text/css">
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/style.js"></script>
 	</head>
 
 	<body>
 		<header>
-			<a href="/" id="logo"><div></div></a>
+			<a href="/" id="logo" style="background-image: url(/img/logo/logo3.png);"></a>
 			<nav>
-				<a href="#about">About</a>
-				<a href="#enterprises">Enterprises</a>
-				<a href="#team">The Team</a>
-				<a href="#start-your-venture">Start Your Venture</a>
-				<a href="#contact">Contact</a>
+				<li><a href="#about">About</a></li>
+				<li><a href="#enterprises">Enterprises</a></li>
+				<li><a href="#team">The Team</a></li>
+				<li><a href="#start-your-venture">Start Your Venture</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</nav>
 		</header>
 
-		<section id="home" class="top" style="background-image: url(img/present.jpg);">
+		<section id="home" class="top" style="background-image: url(img/home.jpg);">
 			<div id="filter"></div>
-			<div id="home-wrapper">
-				<div id="home-logo" style="background-image: url(img/logo.png);"></div>
-				<h2>A Student Run Venture Capital Firm</h2>
-			</div>
+			<div id="home-logo" style="background-image: url(img/logo/logo2.png);"></div>
+			<!-- <h2>A Student Run Venture Capital Firm</h2> -->
 		</section>
 
 		<section id="about">
+			<a href="#about" id="down-arrow">
+				<i class="fa fa-angle-double-down"></i>
+				<div id="left"></div>
+				<div id="right"></div>
+			</a>
+			<div id="timeline"></div>
 			<div class="grid">
-				<h2>About</h2>
-				<h2>History</h2>
+				<h2>the HSE Story</h2>
+				<div id="about-content" class="col-1-2">
+					<h5>The Mission</h5>
+					<p>Hopkins Student Enterprises (HSE) has been established to provide students from all different disciplines with real-world entrepreneurial and leadership experience; to provide a source of employment and income for students of the University; to deliver valuable products and services that benefit the greater Johns Hopkins community; and to foster student innovation and encourage the development of new business.</p>
+				</div>
+				<div class="col-1-2">
+					<div class="jhu">
+						<span style="background-image:url(/img/logo/jhu.png);"></span>
+					</div>
+				</div>
+			</div>
+			<div id="history" class="grid">
+				<div class="col-1-2">
+					<div class="jhu">
+						<span style="background-image:url(/img/logo/cle.jpg);"></span>
+					</div>
+				</div>
+				<div id="history-content" class="col-1-2">
+					<h5>Coming Together</h5>
+					<p>It's part corporation, part student group, part classroom, and part internship all rolled into one. Hopkins Student Enterprises (HSE) provides valuable resources to student entrepreneurs on the Hopkins campus. Whether your business idea is completely off the wall or a simple improvement to an existing business, HSE has an opportunity for you.</p>
+					<p>HSE was started in the Spring of 2006, launching active operations during the Fall semester. Hopkins Student Enterprises was created by the Center for Leadership Education to offer student entrepreneurs an opportunity to develop their business ideas and implement them on campus. </p>
+					<p>By developing your business ideas through HSE, you'll make a lasting impact at Hopkins. After you graduate, your business stays at the University, serving customers and educating student entrepreneurs for years to come.</p>
+				</div>
+			</div>
+			<div id="quote">
+				<div id="quote-pic" style="background-image: url(/img/double.png);"></div>
+				<p>In HSE, experience is not what makes you an exceptional candidate -  it is about passion, dedication and an unyielding hunger to create</p>
+				<h6>-Noah Presler, CEO & President of HSE</h6>
+				<div id="quote-pic-right" style="background-image: url(/img/double.png);"></div>
 			</div>
 		</section>
 		
 		<section id="enterprises">
-
+			<h2>Enterprises</h2>
+			<div id="ent-menu">
+				<ul>
+					<li><a href="#blue-jay-bay" style="background-image:url(/img/logo/bjbay.png);"></a></li>
+					<li><a href="#blue-jay-cleaners" style="background-image:url(/img/logo/bjc.png);"></a></li>
+					<li><a href="#hop-and-shake" style="background-image:url(/img/logo/has.png);"></a></li>
+					<li><a href="#blue-jay-boxes" style="background-image:url(/img/logo/bjb.png);"></a></li>
+					<li><a href="#hopkins-creative-design" style="background-image:url(/img/logo/hcd.png);"></a></li>
+					<li><a href="#hopinks" style="background-image:url(/img/logo/hi.png);"></a></li>
+					<li><a href="#complete-dorm-room" style="background-image:url(/img/logo/cdr.png);"></a></li>
+					<li><a href="#hopkins-student-movers" style="background-image:url(/img/logo/hsm.png);"></a></li>
+				</ul>
+			</div>
+			<div id="blue-jay-bay" class="enterprise" style="background-image:url(/img/bjbay1.jpg);">
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/bjbay.png);"></div>
+					<div class="ent-body">
+						<h4>Premiere Full Service Used Furniture Marketplace</h4>
+						<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+					</div>
+				</div>
+			</div>
+			<div id="blue-jay-cleaners" class="enterprise" style="background-image:url(/img/bjc1.jpg);">
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/bjc.png);"></div>
+					<div class="ent-body">
+						<h4>Premiere Full Service Used Furniture Marketplace</h4>
+						<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+					</div>
+				</div>
+			</div>
+			<div id="hop-and-shake" class="enterprise">
+				<video class="home_video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0">
+		            <source src="/img/shake.mov" type="video/mp4">
+                </video>
+                <div id="filter"></div>
+                <div class="ent-content">
+					<a href="http://hopandshake.johnshopkins.edu/" target="_blank"><div class="ent-logo" style="background-image: url(/img/logo/has.png);"></div></a>
+					<h4>Premiere Full Service Used Furniture Marketplace</h4>
+					<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+				</div>
+			</div>
+			<div id="blue-jay-boxes" class="enterprise" style="background-image: url(/img/bjb1.jpg)">
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/bjb.png);"></div>
+					<div class="ent-body">
+						<h4>Premiere Full Service Used Furniture Marketplace</h4>
+						<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+					</div>
+				</div>
+			</div>
+			<div id="hopkins-creative-design" class="enterprise">
+				<video class="home_video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" volume="0">
+		            <source src="/img/hcd.mp4" type="video/mp4">
+		            <source src="/img/hcd.webm" type="video/webm">
+                </video>
+                <div id="filter"></div>
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/hcd.png);"></div>
+					<h4>Premiere Full Service Used Furniture Marketplace</h4>
+					<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+				</div>
+			</div>
+			<div id="hopinks" class="enterprise" style="background-image:url(/img/hi1.jpg);">
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/hi.png);"></div>
+					<div class="ent-body">
+						<h4>Premiere Full Service Used Furniture Marketplace</h4>
+						<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+					</div>
+				</div>
+			</div>
+			<div id="complete-dorm-room" class="enterprise" style="background-image:url(/img/cdr1.jpg);">
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/cdr.png);"></div>
+					<div class="ent-body">
+						<h4>Premiere Full Service Used Furniture Marketplace</h4>
+						<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+					</div>
+				</div>
+			</div>
+			<div id="hopkins-student-movers" class="enterprise" style="background-image:url(/img/hsm1.jpg);">
+				<div class="ent-content">
+					<div class="ent-logo" style="background-image: url(/img/logo/hsm.png);"></div>
+					<div class="ent-body">
+						<h4>Premiere Full Service Used Furniture Marketplace</h4>
+						<h6>Blue Jay Bay is a furniture and appliance marketplace that operates within the Hopkins community. We purchase and sell furniture, appliances, and other large market items to Johns Hopkins students. Blue Jay Bay makes buying and selling easy by picking up and delivering items directly to your dorm or apartment!</h6>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section id="team">
-
+			<h2>Our Team</h2>
+			<div class="grid">
+				<div class="col-1-6 mem" data-image="/img/team/noah.jpg" data-name="Noah Presler" data-position="President and Chief Executive Officer" data-bio="<h6>Why HSE?</h6><p>Being completely student-run, Hopkins Student Enterprises serves as a valuable educational tool that immerses students in the experience of starting and maintaining a profitablebusiness. By providing undergraduates with meaningful jobs and uncondensed responsibilities, HSE presents an unparalleled opportunity for students to gain immediate, early access to the business world. I joined HSE to take advantage of its wide scope, develop a comprehensive awareness of all facets of its business ventures, and explore the ways that a diverse group of enterprises can coalesce.</p><h6>Goal for 2014-2015</h6><p>This year, I hope to achieve transparency within HSE - a key step towards synchronizing the ventures, improving internal efficiency, and projecting a clear picture of the organization to the Hopkins community.</p><h6>Background</h6><p>Sarah is a Junior working towards a B.S. in Civil Engineering with a Minor in Entrepreneurship and Management. She also serves as Co-Vice President of JHU DM and Head of Outreach for her sorority, in addition to working in an Epigenetics research laboratory on campus. After graduating, Sarah plans on pursuing management consulting.</p>">
+					<div class="mem-photo" style="background-image: url(/img/team/noah.jpg);"></div>
+					<h3>Noah Presler</h3>
+					<h4>President and Chief Executive Officer</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/sarah.jpg);"></div>
+					<h3>Sarah Xu</h3>
+					<h4>Chief Marketing Officer</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/quan.jpg);"></div>
+					<h3>Quan Bui</h3>
+					<h4>Manager of Hopkins Creative Design</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/mattj.jpg);"></div>
+					<h3>Matthew Johnson</h3>
+					<h4>Manager of Blue Jay Bay</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/rachel.png);"></div>
+					<h3>Rachel Xian</h3>
+					<h4>Manager of Blue Jay Boxes</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/blaine.jpg);"></div>
+					<h3>Blaine Muri</h3>
+					<h4>Manager of Blue Jay Cleaners and Complete Dorm Room</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/brian.jpg);"></div>
+					<h3>Brian Kong</h3>
+					<h4>Manager of Hopinks</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/naco.jpg);"></div>
+					<h3>Bryan Ricciardi</h3>
+					<h4>Assistant Manager of Hopkins Student Movers</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/mike.png);"></div>
+					<h3>Mike Wang</h3>
+					<h4>Co-founder and Manager of Hopkins Creative Design</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/kyle.jpg);"></div>
+					<h3>Kyle Fischer</h3>
+					<h4>Co-founder and Manager of Hop and Shake</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/nick.jpg);"></div>
+					<h3>Nick Tzallas</h3>
+					<h4>Co-founder and Manager at HopInks, Co-Founder at Blue Jay Bay</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/max.jpg);"></div>
+					<h3>Max Yeo</h3>
+					<h4>Web Developer and Technical Manager</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/ryan.jpg);"></div>
+					<h3>Ryan Schneider</h3>
+					<h4>Manager of Hopkins Student Movers</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/tom.jpg);"></div>
+					<h3>Tom Jaklitsch</h3>
+					<h4>Technical Manager of Blue Jay Boxes</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/chris.jpg);"></div>
+					<h3>Chris Coughlan</h3>
+					<h4>Co-Manager, The Complete Dorm Room and the Blue Jay Cleaners</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/john.jpg);"></div>
+					<h3>John DeBella</h3>
+					<h4>HSE Photographer</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/sam.jpg);"></div>
+					<h3>Sam Austin</h3>
+					<h4>Manager and Co-founder Hop and Shake</h4>
+				</div>
+				<div class="col-1-6 mem">
+					<div class="mem-photo" style="background-image: url(/img/team/mattt.jpg);"></div>
+					<h3>Matthew Tam</h3>
+					<h4>Manager of Blue Jay Bay</h4>
+				</div>
+			</div>
 		</section>
 
-		<section id="start-your-venture">
-
+		<section id="start-your-venture" style="background-image: url(/img/has3.jpg)">
+			<div class="grid">
+				<h2>Begin Your Venture</h2>
+				<div class="col-1-3 ven">
+					<i class="fa fa-pencil-square-o"></i>
+					<h5>Plan</h5>
+					<p>Do industry and market research to make financial projections for your business idea.  The members of HSE will advise you and together will create a comprehensive breakdown of all the financial matters concerning the new business</p>
+				</div>
+				<div class="col-1-3 ven">
+					<i class="fa fa-line-chart"></i>
+					<h5>Project</h5>
+					<p>Do industry and market research to make financial projections for your business idea.  The members of HSE will advise you and together will create a comprehensive breakdown of all the financial matters concerning the new business</p>
+				</div>
+				<div class="col-1-3 ven">
+					<i class="fa fa-comments"></i>
+					<h5>Pitch</h5>
+					<p>Do industry and market research to make financial projections for your business idea.  The members of HSE will advise you and together will create a comprehensive breakdown of all the financial matters concerning the new business</p>
+				</div>
+			</div>
 		</section>
 
 		<section id="contact">
-
+			<div class="grid">
+				<h2>Contact</h2>
+				<div class="col-1-2">
+					<a id="address">
+						<p>3500 N Charles Street</p>
+						<p>Whitehead Hall</p>
+						<p>Baltimore, MD 21218</p>
+					</a>
+				</div>
+				<div class="col-1-2">
+					<a><p>hse@jhu.edu</p><a>
+				</div>
+			</div>
+			<h6>COPYRIGHT &copy; 2015 HOPKINS STUDENT ENTERPRISES.</h6>
 		</section>
 
-		<footer>
+		<section id="bios">
+			<i id="bios-out" class="fa fa-times"></i>
+			<div id="bios-wrapper">
+				<div id="bios-pic"></div>
+				<div id="bios-content">
+					<h4></h4>
+					<h5></h5>
+					<div id="bios-bio">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <footer>
 			
-		</footer>
+		</footer> -->
+
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/style.js"></script>
 	</body>
 </html>
 	
