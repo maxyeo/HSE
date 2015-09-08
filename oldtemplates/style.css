@@ -1,0 +1,66 @@
+/**
+Bootstrap Overrides
+*/
+
+/*.navbar-inverse .navbar-inner {
+	background-image: none;
+	background-color: #4974A2;
+}*/
+
+.container {
+    width: 1000px;
+}
+
+.navbar-static-top .container{
+    width: 1000px;
+}
+
+.navbar .nav > li > a {
+    padding: 10px;
+}
+
+/**
+HSE Styling
+*/
+body {
+	background-color: #fff;
+}
+
+#hse-logo {
+	height: 60px;
+}
+
+.img-256 {
+	width: 256px;
+}
+
+h2 a {
+	color: inherit;
+}
+
+h2 a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+#hse-header .divider-vertical {
+	height: 60px;
+	margin: 10px 0px;
+}
+
+#hse-header a {
+    color: #4974A2;
+    line-height: 60px;
+    font-size: 1em;
+}
+
+.sub-menu {
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+
+.sub-menu:hover {
+    display: block;
+}
