@@ -1181,7 +1181,63 @@ nav a:hover:after {
         font-size: 10px;
         margin: 0;
     }
+
+    .toAlu {
+        font-family: "Oxygen";
+        font-weight: 100;
+        font-style: bold;
+        margin: 0;
+        font-size: 20px;
+        padding: 50px;
+        color: purple;
+    }
+
 /* End Team */
+
+/* Alumni */
+    #alumni {
+        position: relative;
+        text-align: center;
+        padding: 0 10px 80px;
+        background-image: url(/img/alumniBackGround.jpg);
+    }
+    #alumni h2 {
+        font-family: "Merriweather";
+        font-weight: 900;
+        font-style: italic;
+        margin: 0;
+        font-size: 90px;
+        padding: 40px;
+        text-align: center;
+        color: #24244B;
+    }
+    .alu {
+        padding: 5px; 
+        position: relative;
+        cursor: pointer;
+    }
+    .alu:nth-child(6n+1) {
+        clear: both;
+    }
+    .alu-photo {
+        width: 100%;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .alu h3 {
+        font-size: 14px;
+        margin: .5em;
+    }
+    .alu h4 {
+        font-size: 10px;
+        margin: 0;
+    }
+/* End Alumini */
 
 /* Bios Section */
     #bios {
